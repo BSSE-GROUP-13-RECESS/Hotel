@@ -3,7 +3,6 @@ import org.shared.RoomManager;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.Arrays;
 
 public class RoomManagerImp extends UnicastRemoteObject implements RoomManager {
     String[] roomTypes = {"single", "double", "twin", "triple", "quad"};

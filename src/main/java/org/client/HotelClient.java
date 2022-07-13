@@ -40,10 +40,9 @@ public class HotelClient {
             RoomManager room = (RoomManager) Naming.lookup("rmi://"+args[1]+"/hotelService");
             if (command.equals("book")){
                 System.out.println(room.book(args[2], args[3]));
+                return;
             }
-            else {
-                System.out.println(room.getClass().getMethod(command).invoke(room));
-            }
+            System.out.println(room.getClass().getMethod(command).invoke(room));
         }
         catch (Exception e){
             System.out.println("Received exception: "+e);
