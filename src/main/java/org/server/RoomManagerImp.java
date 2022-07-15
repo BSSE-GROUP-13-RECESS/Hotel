@@ -31,7 +31,7 @@ public class RoomManagerImp extends UnicastRemoteObject implements RoomManager {
         String str = "";
         if (takenRooms[type]<roomTotals[type]){
             guestList[type][takenRooms[type]++] = name;
-            str+=("You have booked a "+roomTypes[type]+" for "+name+" room at "+roomPrices[type]+" UGX for one night.\n");
+            str+=("You have booked a "+roomTypes[type]+" room for "+name+" room at "+roomPrices[type]+" UGX for one night.\n");
         }
         else {
             str+=("Rooms of type "+type+" have all been occupied. Please choose a different type!\n");
